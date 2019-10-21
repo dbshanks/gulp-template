@@ -11,6 +11,7 @@ const rename = require("gulp-rename");
 const cssnano = require('cssnano');
 const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
+const responsivefont = require('postcss-responsive-font');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -29,7 +30,7 @@ function scssTask() {
     .pipe(rename({
       suffix: ".min"
     }))
-    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(postcss([responsivefont(), autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
@@ -53,6 +54,7 @@ function cacheBustTask() {
     .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
     .pipe(dest('.'));
 }
+
 
 function watchTask() {
   browserSync.init({

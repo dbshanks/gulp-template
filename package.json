@@ -4,13 +4,13 @@
   "description": "A basic PHP template system with Sass and Babel",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "gulp"
   },
   "keywords": [
-    "PHP",
     "Template",
     "SCSS",
-    "Sass"
+    "Sass",
+    "Gulp"
   ],
   "author": "Derek B. Shanks",
   "license": "MIT",
@@ -30,5 +30,15 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "animejs": "^3.1.0",
+    "bootstrap-scss": "^4.3.1",
+    "parallax-js": "^3.1.0",
+    "postcss-responsive-font": "^1.0.4",
+    "rellax": "^1.10.0",
+    "scroll-out": "^2.2.7",
+    "swup": "^2.0.7"
   }
 }
