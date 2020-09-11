@@ -4,7 +4,7 @@
   "description": "A Sass build tool featuring Storybook for documentation with A11Y accessibility guidelines and mobile responsive checks",
   "main": "app.js",
   "scripts": {
-    "dev": "gulp",
+    "dev": "concurrently \"gulp\" \"start-storybook -p 6006\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -40,6 +40,7 @@
     "react-is": "^16.13.1"
   },
   "dependencies": {
-    "@storybook/addon-a11y": "^6.0.21"
+    "@storybook/addon-a11y": "^6.0.21",
+    "concurrently": "^5.3.0"
   }
 }
