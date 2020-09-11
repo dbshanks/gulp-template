@@ -1,5 +1,5 @@
 {
-  "name": "sass-sb",
+  "name": "gulp-template",
   "version": "1.0.0",
   "description": "A Sass build tool featuring Storybook for documentation with A11Y accessibility guidelines and mobile responsive checks",
   "main": "app.js",
