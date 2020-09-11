@@ -1,0 +1,59 @@
+//Padding Utilities
+$padding: 30;
+
+@for $i from 1 through $padding {
+  .p-#{$i} {
+    padding: 30rem / $padding * $i;
+  }
+
+  .pl-#{$i} {
+    padding-left: 30rem / $padding * $i;
+  }
+  .pt-#{$i} {
+    padding-top: 30rem / $padding * $i;
+  }
+  .pr-#{$i} {
+    padding-right: 30rem / $padding * $i;
+  }
+  .pb-#{$i} {
+    padding-bottom: 30rem / $padding * $i;
+  }
+  .py-#{$i} {
+    padding-top: 30rem / $padding * $i;
+    padding-bottom: 30rem / $padding * $i;
+  }
+  .px-#{$i} {
+    padding-left: 30rem / $padding * $i;
+    padding-right: 30rem / $padding * $i;
+  }
+}
+
+//Margin Utilities
+$margin: 30;
+
+@for $i from 1 through $margin {
+  .m-#{$i} {
+    margin: 30rem / $margin * $i;
+  }
+
+  .ml-#{$i} {
+    margin-left: 30rem / $margin * $i;
+  }
+  .mt-#{$i} {
+    margin-top: 30rem / $margin * $i;
+  }
+  .mr-#{$i} {
+    margin-right: 30rem / $margin * $i;
+  }
+  .mb-#{$i} {
+    margin-bottom: 30rem / $margin * $i;
+  }
+  .my-#{$i} {
+    margin-top: 30rem / $margin * $i;
+    margin-bottom: 30rem / $margin * $i;
+  }
+  .mx-#{$i} {
+    margin-left: 30rem / $margin * $i;
+    margin-right: 30rem / $margin * $i;
+  }
+}

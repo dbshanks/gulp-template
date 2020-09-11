@@ -1,0 +1,53 @@
+@use "sass:map";
+button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline-color: $off-black;
+  outline: none;
+}
+
+@mixin buttons() {
+  padding: 0.5rem 2rem;
+  color: $white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+//Solid Buttons
+.primary {
+  @include buttons;
+  background-color: $primary;
+  &:hover {
+    background-color: lighten($primary, 10%);
+  }
+  &:focus {
+    background-color: lighten($primary, 10%);
+    transform: scale(0.95);
+  }
+}
+.rounded {
+  @include buttons;
+  background-color: $rounded;
+  border-radius: 0.3rem;
+  &:hover {
+    background-color: lighten($rounded, 10%);
+  }
+  &:focus {
+    background-color: lighten($rounded, 10%);
+    transform: scale(0.95);
+  }
+}
+
+.pill {
+  @include buttons;
+  background-color: $pill;
+  border-radius: 5rem;
+  &:hover {
+    background-color: lighten($pill, 10%);
+  }
+  &:focus {
+    background-color: lighten($rounded, 10%);
+    transform: scale(0.95);
+  }
+}

@@ -1,10 +1,12 @@
 {
-  "name": "php-template",
+  "name": "sass-sb",
   "version": "1.0.0",
-  "description": "A basic PHP template system with Sass and Babel",
+  "description": "A Sass build tool featuring Storybook for documentation with A11Y accessibility guidelines and mobile responsive checks",
   "main": "app.js",
   "scripts": {
-    "run": "gulp"
+    "dev": "gulp",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "Template",
@@ -17,7 +19,12 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/html": "^6.0.21",
     "autoprefixer": "^9.6.5",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
@@ -29,16 +36,10 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "react-is": "^16.13.1"
   },
   "dependencies": {
-    "animate.css": "^3.7.2",
-    "animejs": "^3.1.0",
-    "bootstrap-scss": "^4.3.1",
-    "parallax-js": "^3.1.0",
-    "postcss-responsive-font": "^1.0.4",
-    "rellax": "^1.10.0",
-    "scroll-out": "^2.2.7",
-    "swup": "^2.0.7"
+    "@storybook/addon-a11y": "^6.0.21"
   }
 }

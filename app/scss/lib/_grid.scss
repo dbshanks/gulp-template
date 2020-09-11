@@ -1,0 +1,102 @@
+//Defines columns as 100% / 12 columns.
+$columns: 12;
+
+//Defines height as 100vh / 12 Rows
+$height: 12;
+
+$lg-min: 1025px;
+$lg-max: 1200px;
+
+$md-min: 769px;
+$md-max: 1024px;
+
+$sm-min: 481px;
+$sm-max: 768px;
+
+$xs: 480px;
+
+$padding: 0.5rem;
+
+.container-fluid {
+  @include container;
+  width: calc(100% - 1rem);
+}
+
+.container-1280 {
+  @include container;
+  max-width: 1280px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  gap: 5px;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  padding: $padding;
+}
+
+//Iteration for the columns setup including and offset
+//produces a redundant offset-12 (col-1 to col-12)
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    flex: 0 0 100% / $columns * $i;
+    padding: $padding;
+  }
+
+  @media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+    .col-lg-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      padding: $padding;
+    }
+  }
+
+  @media screen and (min-width: $md-min) and (max-width: $md-max) {
+    .col-md-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      padding: $padding;
+    }
+  }
+
+  @media screen and (min-width: $sm-min) and (max-width: $sm-max) {
+    .col-sm-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      padding: $padding;
+    }
+  }
+  @media screen and (max-width: $xs) {
+    .col-xs-#{$i} {
+      flex: 0 0 100% / $columns * $i;
+      padding: $padding;
+    }
+  }
+  .offset-#{$i} {
+    margin-left: 100% / $columns * $i;
+  }
+}
+
+// Iteration for the height of 12 sizes based on 100vh (h1 to h12)
+@for $h from 1 through $height {
+  .h-#{$h} {
+    min-height: 100vh / $height * $h;
+  }
+}

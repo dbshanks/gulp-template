@@ -1,0 +1,26 @@
+@mixin heading($view, $max) {
+  font-size: $max + "rem";
+  font-size: clamp(
+    calc(#{$max+"rem"} / 2),
+    calc(#{$view} * #{$max}),
+    #{$max + "rem"}
+  );
+}
+
+@mixin paragraph($view, $max-p) {
+  font-size: $max-p + "rem";
+  font-size: clamp(
+    calc(#{$max-p+"rem"} / 2),
+    calc(#{$view} * #{$max-p}),
+    #{$max-p + "rem"}
+  );
+}
+
+//Grid
+@mixin container() {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 5px;
+}
